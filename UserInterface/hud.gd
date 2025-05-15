@@ -40,9 +40,12 @@ func _on_level_completed():
 	Event.total_coin += coin_count
 	var next_level = Event.curr_level + 1
 	print(Event.level_data)
-	if Event.level_data.has(next_level):
+	if not Event.level_data.has(next_level):
 		Event.level_data[next_level] = false
-	%FileManager.save()
+	else:
+		Event.level_data[next_level] = false
+		
+	%FileManager.save_game()
 	display_level_complete()
 	
 func display_level_complete() -> void:
@@ -61,9 +64,16 @@ func goto_level_select():
 
 func goto_next_level():
 	var next_level := "res://Levels/level_" + str(Event.curr_level + 1) + ".tscn"
+	print("Mencoba memuat: ", next_level)
+	print("Level sekarang: ", Event.curr_level)
+	print("Level data: ", Event.level_data)
+	
 	if FileAccess.file_exists(next_level):
 		Event.curr_level += 1
 		%fader.fade_screen(true, 1.0, func (): scene_tree.change_scene_to_file(next_level))
+	else:
+		print("ERROR: File level berikutnya tidak ditemukan!")
+		goto_level_select()
 
 func restart_game():
 	coin_count = 0
@@ -80,3 +90,7 @@ func _on_resume_button_down() -> void:
 
 func pause_game() -> void:
 	set_game_paused(true)
+
+func _on_exit_button_down():
+	set_game_paused(false)
+	goto_home()

@@ -378,6 +378,7 @@ unique_name_in_owner = true
 script = ExtResource("10_1rtow")
 
 [connection signal="button_down" from="PauseButton" to="." method="pause_game"]
+[connection signal="button_down" from="PauseScreen/TextureRect/GridContainer/ExitButton" to="." method="_on_exit_button_down"]
 [connection signal="button_down" from="PauseScreen/TextureRect/GridContainer/RestartButton" to="." method="restart_game"]
 [connection signal="button_down" from="PauseScreen/TextureRect/GridContainer/ResumeButton" to="." method="_on_resume_button_down"]
 [connection signal="button_down" from="LevelComplete/TextureRect/HBoxContainer/HomeButton" to="." method="goto_home"]

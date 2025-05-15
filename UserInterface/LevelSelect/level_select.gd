@@ -6,12 +6,20 @@ extends Control
 func _ready():
 	connect_level_selected_to_level_box()
 	%FileManager.load_game()
+	
 	if Event.level_data.is_empty():
+		Event.level_data = {1: false}
 		setup_level_box()
 	else:
+		Event.level_data[1] = false
+		
 		for box in %LevelGrid.get_children():
 			box.level_num = box.get_index() + 1
-			box.locked = Event.level_data.get(box.get_index() + 1)
+			if Event.level_data.has(box.level_num):
+				box.locked = Event.level_data[box.level_num]
+			else:
+				box.locked = true
+				
 	moneyLabel.text = str(Event.total_coin)
 	
 func setup_level_box() -> void:
