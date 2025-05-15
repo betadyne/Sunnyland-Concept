@@ -1,0 +1,177 @@
+[gd_scene load_steps=16 format=3 uid="uid://i7n16edgwo10"]
+
+[ext_resource type="Texture2D" uid="uid://r78bvyapvcy4" path="res://assets/GUI/bg.png" id="1_1aw5w"]
+[ext_resource type="Script" path="res://UserInterface/LevelSelect/level_select.gd" id="1_330dn"]
+[ext_resource type="Texture2D" uid="uid://ddr41vw6snno5" path="res://assets/GUI/tile_0000_bg.png" id="2_yl3ts"]
+[ext_resource type="PackedScene" uid="uid://bqebru84eup2v" path="res://UserInterface/LevelSelect/level_box.tscn" id="3_elwss"]
+[ext_resource type="Texture2D" uid="uid://c0e7833eutjyh" path="res://assets/GUI/Button.png" id="5_5euub"]
+[ext_resource type="Texture2D" uid="uid://cvn4xuof6ooi7" path="res://assets/GUI/Window.png" id="5_c7xsr"]
+[ext_resource type="FontFile" uid="uid://cwvpdf5fo011y" path="res://assets/Others/Kenney Bold.ttf" id="7_aoryq"]
+[ext_resource type="PackedScene" uid="uid://dinpppgyybxc5" path="res://UserInterface/fader.tscn" id="7_k2ytg"]
+[ext_resource type="Script" path="res://FileManager.gd" id="9_1sqwa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_poo0s"]
+atlas = ExtResource("1_1aw5w")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65ay2"]
+atlas = ExtResource("2_yl3ts")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_566a2"]
+atlas = ExtResource("5_5euub")
+region = Rect2(1142, 972, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_io4g7"]
+atlas = ExtResource("5_5euub")
+region = Rect2(1551, 972, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyj0j"]
+atlas = ExtResource("5_5euub")
+region = Rect2(1346, 972, 181, 190)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfoeu"]
+atlas = ExtResource("5_c7xsr")
+region = Rect2(3619, 3893, 309, 111)
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_330dn")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_poo0s")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -270.0
+offset_right = 480.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_65ay2")
+expand_mode = 1
+
+[node name="LevelGrid" type="GridContainer" parent="TextureRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.102
+anchor_top = 0.174
+anchor_right = 0.897
+anchor_bottom = 0.822
+offset_left = 0.0799942
+offset_top = 0.0399933
+offset_right = -0.119995
+offset_bottom = 0.119995
+columns = 5
+
+[node name="LevelBox" parent="TextureRect/LevelGrid" instance=ExtResource("3_elwss")]
+layout_mode = 2
+disabled = false
+locked = false
+
+[node name="LevelBox2" parent="TextureRect/LevelGrid" instance=ExtResource("3_elwss")]
+layout_mode = 2
+level_num = 2
+
+[node name="LevelBox3" parent="TextureRect/LevelGrid" instance=ExtResource("3_elwss")]
+layout_mode = 2
+level_num = 3
+
+[node name="LevelBox4" parent="TextureRect/LevelGrid" instance=ExtResource("3_elwss")]
+layout_mode = 2
+level_num = 4
+
+[node name="LevelBox5" parent="TextureRect/LevelGrid" instance=ExtResource("3_elwss")]
+layout_mode = 2
+level_num = 5
+
+[node name="LevelBox6" parent="TextureRect/LevelGrid" instance=ExtResource("3_elwss")]
+layout_mode = 2
+
+[node name="LevelBox7" parent="TextureRect/LevelGrid" instance=ExtResource("3_elwss")]
+layout_mode = 2
+
+[node name="LevelBox8" parent="TextureRect/LevelGrid" instance=ExtResource("3_elwss")]
+layout_mode = 2
+
+[node name="LevelBox9" parent="TextureRect/LevelGrid" instance=ExtResource("3_elwss")]
+layout_mode = 2
+
+[node name="LevelBox10" parent="TextureRect/LevelGrid" instance=ExtResource("3_elwss")]
+layout_mode = 2
+
+[node name="HomeButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04
+anchor_top = 0.023
+anchor_right = 0.129
+anchor_bottom = 0.211
+offset_left = -0.0800018
+offset_top = 0.0959988
+offset_right = 0.391998
+offset_bottom = 0.271988
+texture_normal = SubResource("AtlasTexture_566a2")
+texture_pressed = SubResource("AtlasTexture_io4g7")
+texture_hover = SubResource("AtlasTexture_gyj0j")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MoneyTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 836.0
+offset_top = 4.0
+offset_right = 1145.0
+offset_bottom = 115.0
+texture = SubResource("AtlasTexture_nfoeu")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="MoneyTexture"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.262
+anchor_top = 0.198
+anchor_right = 0.926
+anchor_bottom = 0.703
+offset_left = 0.0419922
+offset_top = 0.0219994
+offset_right = -0.134033
+offset_bottom = -0.0330048
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("7_aoryq")
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fader" parent="." instance=ExtResource("7_k2ytg")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="FileManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("9_1sqwa")
+
+[connection signal="button_down" from="HomeButton" to="." method="_on_home_button_down"]
