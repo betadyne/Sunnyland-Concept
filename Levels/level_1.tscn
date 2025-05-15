@@ -12,8 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://bueuwtuv8bfal" path="res://Props/Platforms/Pushable/block_pushable_platform.tscn" id="7_ty7f8"]
 [ext_resource type="PackedScene" uid="uid://bp133lbf78o5x" path="res://Props/Platforms/movable_platform.tscn" id="8_bsc3j"]
 [ext_resource type="PackedScene" uid="uid://vug2hj4ifnrd" path="res://Collectables/gem.tscn" id="8_g5gd4"]
-[ext_resource type="PackedScene" uid="uid://ceurhyy16x5tf" path="res://Levels/level_2.tscn" id="13_v60tb"]
 [ext_resource type="PackedScene" uid="uid://fj1tyjig8836" path="res://Props/safe_house.tscn" id="13_w5jpp"]
+[ext_resource type="AudioStream" uid="uid://lm8r8f088v20" path="res://assets/Music/Tiger Temple Trial.ogg" id="14_2hkqn"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dyv1n"]
 
@@ -53,8 +53,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vqlyr"]
 _data = {
-"RESET": SubResource("Animation_dr1tj"),
-"move": SubResource("Animation_oescf")
+&"RESET": SubResource("Animation_dr1tj"),
+&"move": SubResource("Animation_oescf")
 }
 
 [node name="Level1" type="Node2D"]
@@ -123,7 +123,7 @@ position = Vector2(776, 529)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovablePlatforms/MovablePlatform"]
 libraries = {
-"": SubResource("AnimationLibrary_vqlyr")
+&"": SubResource("AnimationLibrary_vqlyr")
 }
 autoplay = "move"
 
@@ -155,7 +155,6 @@ position = Vector2(576, 325)
 
 [node name="SafeHouse" parent="." instance=ExtResource("13_w5jpp")]
 position = Vector2(1234, 250)
-next_level = ExtResource("13_v60tb")
 
 [node name="Player" parent="." instance=ExtResource("2_66qul")]
 position = Vector2(65, 288)
@@ -164,3 +163,7 @@ gravity = 350.0
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_2hkqn")
+autoplay = true

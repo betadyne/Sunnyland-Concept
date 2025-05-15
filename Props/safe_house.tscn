@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://fj1tyjig8836"]
 
 [ext_resource type="Texture2D" uid="uid://dqld800oxjm4k" path="res://assets/Sprites/props/house.png" id="1_pr3sf"]
-[ext_resource type="Script" path="res://Props/safe_house.gd" id="1_q56mf"]
+[ext_resource type="Script" uid="uid://bati3t0rjgy6a" path="res://Props/safe_house.gd" id="1_q56mf"]
 [ext_resource type="Texture2D" uid="uid://cmbl36lmxa30i" path="res://assets/Sprites/props/door-opened.png" id="2_t1lbq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqedu"]

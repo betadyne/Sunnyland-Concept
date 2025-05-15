@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://vug2hj4ifnrd"]
 
 [ext_resource type="PackedScene" uid="uid://e2yqaebj27r1" path="res://Collectables/base_collectable.tscn" id="1_s40vt"]
-[ext_resource type="Script" path="res://Collectables/Gem.gd" id="2_r7rhh"]
-[ext_resource type="Texture2D" uid="uid://b720twjxdbo58" path="res://assets/Sprites/Characters/gem/gem-1.png" id="3_xwjaj"]
-[ext_resource type="Texture2D" uid="uid://b4qa77jqdc7ta" path="res://assets/Sprites/Characters/gem/gem-2.png" id="4_rhg6m"]
-[ext_resource type="Texture2D" uid="uid://ccsj6f73q3c18" path="res://assets/Sprites/Characters/gem/gem-3.png" id="5_45cnb"]
-[ext_resource type="Texture2D" uid="uid://43l4iowdtogy" path="res://assets/Sprites/Characters/gem/gem-4.png" id="6_4qmyk"]
-[ext_resource type="Texture2D" uid="uid://dm6tjauqqa71i" path="res://assets/Sprites/Characters/gem/gem-5.png" id="7_aqwlj"]
+[ext_resource type="Script" uid="uid://c66k2kkf3ktw8" path="res://Collectables/Gem.gd" id="2_r7rhh"]
+[ext_resource type="Texture2D" uid="uid://cupiyhojg6mrw" path="res://assets/Sprites/Characters/gem/gem-1.png" id="3_xwjaj"]
+[ext_resource type="Texture2D" uid="uid://s30f7buhcfdh" path="res://assets/Sprites/Characters/gem/gem-2.png" id="4_rhg6m"]
+[ext_resource type="Texture2D" uid="uid://dv1f0kt7uptcy" path="res://assets/Sprites/Characters/gem/gem-3.png" id="5_45cnb"]
+[ext_resource type="Texture2D" uid="uid://dbobeecyjegfn" path="res://assets/Sprites/Characters/gem/gem-4.png" id="6_4qmyk"]
+[ext_resource type="Texture2D" uid="uid://cdf0sk1q88iqk" path="res://assets/Sprites/Characters/gem/gem-5.png" id="7_aqwlj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gxfp2"]
 animations = [{

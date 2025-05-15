@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://deno7jguiutl3" path="res://assets/GUI/tile_0030.png" id="1_qwvmm"]
 [ext_resource type="Texture2D" uid="uid://cifgvhuegfdm6" path="res://assets/GUI/tile_0029.png" id="2_0vw7h"]
-[ext_resource type="Script" path="res://UserInterface/LevelSelect/level_box.gd" id="3_c8obu"]
+[ext_resource type="Script" uid="uid://c0fmwmufdl23d" path="res://UserInterface/LevelSelect/level_box.gd" id="3_c8obu"]
 [ext_resource type="FontFile" uid="uid://daygf1fuan01o" path="res://assets/Others/Kenney Future.ttf" id="3_d5hlv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_orl6e"]

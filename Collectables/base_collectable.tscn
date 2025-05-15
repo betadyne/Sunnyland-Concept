@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://e2yqaebj27r1"]
 
-[ext_resource type="Script" path="res://Collectables/base_collectable.gd" id="1_82kgp"]
+[ext_resource type="Script" uid="uid://d2uawy1k3wlun" path="res://Collectables/base_collectable.gd" id="1_82kgp"]
 
 [node name="BaseCollectable" type="Area2D"]
 collision_layer = 0

@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://duupjy5cgfgcj"]
+[gd_scene load_steps=9 format=3 uid="uid://duupjy5cgfgcj"]
 
-[ext_resource type="Script" path="res://MainScreen/main_screen.gd" id="1_df5r5"]
+[ext_resource type="Script" uid="uid://by25fa141v0dh" path="res://MainScreen/main_screen.gd" id="1_df5r5"]
 [ext_resource type="TileSet" uid="uid://b8ollnpu1av3u" path="res://assets/Others/world.tres" id="2_147ek"]
 [ext_resource type="PackedScene" uid="uid://i7n16edgwo10" path="res://UserInterface/LevelSelect/level_select.tscn" id="2_scv4r"]
 [ext_resource type="PackedScene" uid="uid://dhfrkfc2ejp5t" path="res://UserInterface/bg.tscn" id="6_paulv"]
 [ext_resource type="Texture2D" uid="uid://dmcdt0lbs0ifk" path="res://assets/GUI/button_rectangle_flat.png" id="6_qd6k3"]
 [ext_resource type="FontFile" uid="uid://cwvpdf5fo011y" path="res://assets/Others/Kenney Bold.ttf" id="7_362l8"]
 [ext_resource type="Texture2D" uid="uid://b5y67om8kt5an" path="res://assets/Sprites/HUD/title-screen.png" id="7_ilr83"]
+[ext_resource type="AudioStream" uid="uid://cudf0w6dteyiu" path="res://assets/Music/Swamp of Digeridoos.ogg" id="8_pbefs"]
 
 [node name="MainScreen" type="Node2D"]
 script = ExtResource("1_df5r5")
@@ -102,6 +103,10 @@ theme_override_font_sizes/font_size = 18
 text = "EXIT"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_pbefs")
+autoplay = true
 
 [connection signal="button_down" from="CanvasLayer/VBoxContainer/PlayButton" to="." method="_on_play_button_down"]
 [connection signal="button_down" from="CanvasLayer/VBoxContainer/ExitButton" to="." method="_on_exit_button_down"]

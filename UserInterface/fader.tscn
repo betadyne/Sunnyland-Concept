@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dinpppgyybxc5"]
 
-[ext_resource type="Script" path="res://UserInterface/fader.gd" id="1_e2mjh"]
+[ext_resource type="Script" uid="uid://dkm24l18tcoev" path="res://UserInterface/fader.gd" id="1_e2mjh"]
 
 [node name="fader" type="ColorRect"]
 modulate = Color(1, 1, 1, 0)

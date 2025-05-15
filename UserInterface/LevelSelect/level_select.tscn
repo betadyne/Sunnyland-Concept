@@ -1,14 +1,14 @@
 [gd_scene load_steps=16 format=3 uid="uid://i7n16edgwo10"]
 
 [ext_resource type="Texture2D" uid="uid://r78bvyapvcy4" path="res://assets/GUI/bg.png" id="1_1aw5w"]
-[ext_resource type="Script" path="res://UserInterface/LevelSelect/level_select.gd" id="1_330dn"]
+[ext_resource type="Script" uid="uid://bgr7ant4jj16k" path="res://UserInterface/LevelSelect/level_select.gd" id="1_330dn"]
 [ext_resource type="Texture2D" uid="uid://ddr41vw6snno5" path="res://assets/GUI/tile_0000_bg.png" id="2_yl3ts"]
 [ext_resource type="PackedScene" uid="uid://bqebru84eup2v" path="res://UserInterface/LevelSelect/level_box.tscn" id="3_elwss"]
 [ext_resource type="Texture2D" uid="uid://c0e7833eutjyh" path="res://assets/GUI/Button.png" id="5_5euub"]
 [ext_resource type="Texture2D" uid="uid://cvn4xuof6ooi7" path="res://assets/GUI/Window.png" id="5_c7xsr"]
 [ext_resource type="FontFile" uid="uid://cwvpdf5fo011y" path="res://assets/Others/Kenney Bold.ttf" id="7_aoryq"]
 [ext_resource type="PackedScene" uid="uid://dinpppgyybxc5" path="res://UserInterface/fader.tscn" id="7_k2ytg"]
-[ext_resource type="Script" path="res://FileManager.gd" id="9_1sqwa"]
+[ext_resource type="Script" uid="uid://c53fjt05mqbwd" path="res://FileManager.gd" id="9_1sqwa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_poo0s"]
 atlas = ExtResource("1_1aw5w")

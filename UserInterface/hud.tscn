@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://c60dovlbpwlby"]
 
-[ext_resource type="Script" path="res://UserInterface/hud.gd" id="1_jm052"]
+[ext_resource type="Script" uid="uid://bal1krjigomi5" path="res://UserInterface/hud.gd" id="1_jm052"]
 [ext_resource type="PackedScene" uid="uid://cmblqe6t82d2w" path="res://UserInterface/Cherry.tscn" id="1_w4ght"]
 [ext_resource type="Texture2D" uid="uid://cupiyhojg6mrw" path="res://assets/Sprites/Characters/gem/gem-1.png" id="2_3d0s5"]
 [ext_resource type="FontFile" uid="uid://cwvpdf5fo011y" path="res://assets/Others/Kenney Bold.ttf" id="3_aqb1h"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cvn4xuof6ooi7" path="res://assets/GUI/Window.png" id="7_njtue"]
 [ext_resource type="Texture2D" uid="uid://c0e7833eutjyh" path="res://assets/GUI/Button.png" id="8_clr8c"]
 [ext_resource type="PackedScene" uid="uid://dinpppgyybxc5" path="res://UserInterface/fader.tscn" id="9_dj7u6"]
-[ext_resource type="Script" path="res://FileManager.gd" id="10_1rtow"]
+[ext_resource type="Script" uid="uid://c53fjt05mqbwd" path="res://FileManager.gd" id="10_1rtow"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pelfa"]
 font = ExtResource("3_aqb1h")
